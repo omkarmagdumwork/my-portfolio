@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Saira", sans-serif;
+  --color-bg: #1a1a1a;
+  --color-card: #2b2b2b;
+  --color-primary: #8b5cf6;
+  --color-muted: #a8a8b3;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-bg); color: #fff; font-family: var(--font-sans); }
+section { scroll-margin-top: 90px; }
+
+/* typewriter caret */
+.caret { display: inline-block; width: 3px; height: 1em; margin-left: 6px; vertical-align: -0.1em; background: var(--color-primary); animation: typeblink 0.8s step-end infinite; }
+@keyframes typeblink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; scroll-behavior: auto !important; } }
