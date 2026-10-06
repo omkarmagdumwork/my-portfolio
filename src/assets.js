@@ -48,7 +48,7 @@ export const projects = [
     image: "/comet.png",
     tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "Web Development", "UI/UX","Bootstrap"],           
     demo: "https://www.wearcomet.com/",
-    code: "#",
+    code: "https://github.com/omkarmagdumwork/comet",
   },
   {
     title: "Portfolio Website",
@@ -56,7 +56,7 @@ export const projects = [
     image: "/portfolio.png",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     demo: "#",
-    code: "#",
+    code: "https://github.com/omkarmagdumwork/my-portfolio",
   },
   {
     title: "Android Accident Detection Simulation",
