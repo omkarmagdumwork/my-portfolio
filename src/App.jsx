@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import { profile } from "./assets";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -16,6 +17,7 @@ export default function App() {
       <main><Routes><Route path="/" element={<Home />} /></Routes></main>
       <footer className="bg-card/60 text-center text-muted py-8">
         © {new Date().getFullYear()} {profile.name}. All rights reserved.
+        <WhatsAppButton />
       </footer>
     </>
   );

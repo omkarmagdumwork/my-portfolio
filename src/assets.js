@@ -1,13 +1,29 @@
 // All portfolio content lives here. Edit this file to make the site yours.
 // Put your photo at public/profile.jpg (and optional project images in public/projects/).
-import { FaReact, FaServer, FaDatabase, FaMobileAlt, FaCloud, FaTools, FaLightbulb, FaPaintBrush, FaCode, FaGithub, FaLinkedin, FaTwitter, FaDribbble } from "react-icons/fa";
+import {
+  FaReact,
+  FaServer,
+  FaDatabase,
+  FaMobileAlt,
+  FaCloud,
+  FaTools,
+  FaLightbulb,
+  FaPaintBrush,
+  FaCode,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaDribbble,
+  FaInstagram,
+} from "react-icons/fa";
 
 export const profile = {
   name: "Omkar Magdum",
   firstName: "Omkar ",
   lastName: "Magdum",
   role: "Full Stack Developer",
- tagline: "I build full-stack web applications with the MERN stack and turn real-world problems into clean, scalable code.",
+  tagline:
+    "I build full-stack web applications with the MERN stack and turn real-world problems into clean, scalable code.",
   photo: "/hero1.png",
 };
 
@@ -18,27 +34,98 @@ export const about = {
     "I'm currently strengthening my skills in Next.js, Vue.js and Tailwind CSS, and I'm looking for a full-time Full Stack Developer role where I can contribute and keep growing.",
   ],
   cards: [
-    { icon: FaLightbulb, title: "Problem Solver", text: "I enjoy solving real-world problems with practical, working software." },
-    { icon: FaPaintBrush, title: "Design Oriented", text: "I care about clean, responsive interfaces and a smooth user experience." },
-    { icon: FaCode, title: "Clean Code", text: "I write readable, maintainable and scalable code." },
+    {
+      icon: FaLightbulb,
+      title: "Problem Solver",
+      text: "I enjoy solving real-world problems with practical, working software.",
+    },
+    {
+      icon: FaPaintBrush,
+      title: "Design Oriented",
+      text: "I care about clean, responsive interfaces and a smooth user experience.",
+    },
+    {
+      icon: FaCode,
+      title: "Clean Code",
+      text: "I write readable, maintainable and scalable code.",
+    },
+    {
+      icon: FaCode,
+      title: "Continuous Learner",
+      text: "I enjoy learning new technologies and improving my development skills.",
+    },
   ],
 };
 
 export const skills = [
-  { icon: FaReact, title: "Frontend Development", text: "Building responsive and interactive user interfaces.", tags: ["React.js", "Next.js", "Vue.js", "Tailwind CSS", "Material-UI"] },
-  { icon: FaServer, title: "Backend Development", text: "Creating server-side applications and RESTful APIs.", tags: ["Node.js", "Express.js", "FastAPI", "REST APIs"] },
-  { icon: FaDatabase, title: "Database Management", text: "Designing and querying databases for web applications.", tags: ["MongoDB", "MongoDB Atlas", "MySQL", "SQL"] },
-  { icon: FaCode, title: "Programming Languages", text: "Core languages I use for development and problem solving.", tags: ["JavaScript", "Java", "Python", "C/C++"] },
-  { icon: FaCloud, title: "Cloud & IT Support", text: "Cloud basics and hands-on IT systems experience.", tags: ["AWS", "Networking", "Server Management", "Troubleshooting"] },
-  { icon: FaTools, title: "Tools & Technologies", text: "Tools I use in my development workflow.", tags: ["Git & GitHub", "Postman", "JIRA", "Vite", "Appwrite"] },
+  {
+    icon: FaReact,
+    title: "Frontend Development",
+    text: "Building responsive and interactive user interfaces.",
+    tags: ["React.js", "Next.js", "Vue.js", "Tailwind CSS", "Material-UI"],
+  },
+  {
+    icon: FaServer,
+    title: "Backend Development",
+    text: "Creating server-side applications and RESTful APIs.",
+    tags: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
+  },
+  {
+    icon: FaDatabase,
+    title: "Database Management",
+    text: "Designing and querying databases for web applications.",
+    tags: ["MongoDB", "MongoDB Atlas", "MySQL", "SQL"],
+  },
+  {
+    icon: FaCode,
+    title: "Programming Languages",
+    text: "Core languages I use for development and problem solving.",
+    tags: ["JavaScript", "Java", "Python", "C/C++"],
+  },
+  {
+    icon: FaCloud,
+    title: "Cloud & IT Support",
+    text: "Cloud basics and hands-on IT systems experience.",
+    tags: ["AWS", "Networking", "Server Management", "Troubleshooting"],
+  },
+  {
+    icon: FaTools,
+    title: "Tools & Technologies",
+    text: "Tools I use in my development workflow.",
+    tags: ["Git & GitHub", "Postman", "JIRA", "Vite", "Appwrite"],
+  },
 ];
 
 export const projects = [
   {
+    title: "Jewellery ERP System",
+    text: "Developed a comprehensive full-stack ERP and e-commerce platform for jewellery businesses featuring an admin management dashboard, customer storefront, live rate calculator, billing, and secure inventory tracking.",
+    image: "/jewellery.png",
+    tags: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "Tailwind CSS",
+      "REST APIs",
+      "Vercel",
+      "Render"
+    ],
+    demo: "https://jewellery-erp-project-4u18.vercel.app/",
+    code: "https://github.com/omkarmagdumwork/Jewellery-ERP-project",
+},
+  {
     title: "Automated E-Waste Collection Analysis",
     text: "A system that analyzes e-waste collection data to track volumes and improve collection planning.",
     image: "/e waste.png",
-    tags: ["React","MERN","Node.js","MongoDB", "Data Analysis", "Machine Learning"],   
+    tags: [
+      "React",
+      "MERN",
+      "Node.js",
+      "MongoDB",
+      "Data Analysis",
+      "Machine Learning",
+    ],
     demo: "https://ewastepmc.appwrite.network/auth",
     code: "https://github.com/omkarmagdumwork/pune-ewaste-app",
   },
@@ -46,7 +133,15 @@ export const projects = [
     title: "Comet Website Clone",
     text: "A responsive clone of the Comet website, built to practice layout, styling and interactions.",
     image: "/comet.png",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "Web Development", "UI/UX","Bootstrap"],           
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design",
+      "Web Development",
+      "UI/UX",
+      "Bootstrap",
+    ],
     demo: "https://www.wearcomet.com/",
     code: "https://github.com/omkarmagdumwork/comet",
   },
@@ -62,7 +157,7 @@ export const projects = [
     title: "Android Accident Detection Simulation",
     text: "A simulation of an Android app that detects accidents from sensor data and triggers an alert.",
     image: "/accident.png",
-    tags: ["Android", "Java", "Sensors"],         
+    tags: ["Android", "Java", "Sensors"],
     demo: "#",
     code: "https://github.com/omkarmagdumwork/AccidentDetectionApp",
   },
@@ -89,10 +184,21 @@ export const contact = {
   phone: "+91 9359988224",
   socials: [
     { icon: FaGithub, href: "https://github.com/omkarmagdumwork" },
-    { icon: FaLinkedin, href: "https://www.linkedin.com/in/omkar-magdum-0594bb313/" },
+    {
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/in/omkar-magdum-0594bb313/",
+    },
     { icon: FaTwitter, href: "https://twitter.com/" },
+    { icon: FaInstagram, href: "https://www.instagram.com/omkar_magdum_0405/" },
     { icon: FaDribbble, href: "https://dribbble.com/" },
   ],
 };
 
-export const navLinks = ["Home", "About", "Skills", "Projects", "Experience", "Contact"];
+export const navLinks = [
+  "Home",
+  "About",
+  "Skills",
+  "Projects",
+  "Experience",
+  "Contact",
+];
