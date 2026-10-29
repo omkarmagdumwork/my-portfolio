@@ -1,10 +1,15 @@
+import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 export default function ProjectCard({ project, index }) {
   const { title, text, image, tags, demo, code } = project;
   return (
-    <Reveal delay={0.08 * (index % 3)}>
-      <article className="bg-card rounded-3xl overflow-hidden h-full cursor-pointer transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20 group">
+    <Reveal delay={0.12 * (index % 3)} dir="zoom">
+      <motion.article
+        whileHover={{ y: -10, scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 250, damping: 18 }}
+        className="bg-card rounded-3xl overflow-hidden h-full cursor-pointer transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/20 group"
+      >
         <div className="h-[220px] overflow-hidden bg-gradient-to-br from-primary/40 to-pink-600/40">
           <img src={image} alt={title} onError={(e) => (e.currentTarget.style.display = "none")}
             className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
@@ -20,7 +25,7 @@ export default function ProjectCard({ project, index }) {
             <a href={code} className="flex-1 text-center py-3 rounded-lg border border-primary font-semibold hover:bg-primary/20 transition">Code</a>
           </div>
         </div>
-      </article>
+      </motion.article>
     </Reveal>
   );
 }

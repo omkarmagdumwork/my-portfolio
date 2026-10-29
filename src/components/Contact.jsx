@@ -12,7 +12,7 @@ export default function Contact() {
     setSent(true);
     e.target.reset();
   };
-  const field = "w-full bg-card rounded-lg px-4 py-4 outline-none border border-transparent focus:border-primary transition";
+  const field = "w-full bg-card rounded-lg px-4 py-4 outline-none border border-transparent focus:border-primary focus:shadow-lg focus:shadow-primary/20 transition";
   const info = [
     { icon: FaMapMarkerAlt, label: "Location", value: contact.location },
     { icon: FaEnvelope, label: "Email", value: contact.email },
@@ -23,20 +23,20 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto px-6">
         <SectionTitle first="Get In" second="Touch" sub="Have a project in mind or want to collaborate? Let's talk!" />
         <div className="grid md:grid-cols-2 gap-12">
-          <Reveal>
+          <Reveal dir="left">
             <form onSubmit={onSubmit} className="space-y-5">
               <label className="block text-lg">Your Name<input required name="name" className={`${field} mt-2`} /></label>
               <label className="block text-lg">Email Address<input required type="email" name="email" className={`${field} mt-2`} /></label>
               <label className="block text-lg">Your Message<textarea required name="message" rows={5} className={`${field} mt-2`} /></label>
-              <button className="w-full py-4 rounded-lg bg-primary font-semibold hover:bg-violet-600 transition cursor-pointer">Send Message</button>
+              <button className="w-full py-4 rounded-lg bg-primary font-semibold hover:bg-violet-600 hover:-translate-y-1 active:scale-95 transition cursor-pointer">Send Message</button>
               {sent && <p className="text-violet-300">Message sent. Thanks for reaching out!</p>}
             </form>
           </Reveal>
-          <Reveal delay={0.15}>
+          <Reveal delay={0.15} dir="right">
             <div className="space-y-8">
               {info.map(({ icon: Icon, label, value }) => (
-                <div key={label} className="flex gap-4">
-                  <Icon className="text-2xl mt-1" />
+                <div key={label} className="flex gap-4 group">
+                  <Icon className="text-2xl mt-1 transition-transform duration-300 group-hover:scale-125 group-hover:text-primary" />
                   <div><h4 className="text-xl font-bold">{label}</h4><p className="text-muted text-lg">{value}</p></div>
                 </div>
               ))}
@@ -45,7 +45,7 @@ export default function Contact() {
                 <div className="flex gap-4">
                   {contact.socials.map(({ icon: Icon, href }) => (
                     <a key={href} href={href} target="_blank" rel="noreferrer"
-                      className="w-14 h-14 rounded-full bg-card flex items-center justify-center text-xl hover:bg-primary hover:-translate-y-1 transition">
+                      className="w-14 h-14 rounded-full bg-card flex items-center justify-center text-xl hover:bg-primary hover:-translate-y-1 hover:rotate-[360deg] transition duration-500">
                       <Icon />
                     </a>
                   ))}

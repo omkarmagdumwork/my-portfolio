@@ -52,7 +52,7 @@ export const about = {
     {
       icon: FaCode,
       title: "Continuous Learner",
-      text: "I enjoy learning new technologies and improving my development skills.",
+      text: "I enjoy learning new technologies and improving my development skills..",
     },
   ],
 };

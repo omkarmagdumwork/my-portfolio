@@ -12,6 +12,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -60 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.03, rotate: -1 }}
             className="rounded-3xl overflow-hidden bg-card aspect-[3/4] lg:aspect-auto lg:h-[620px]"
           >
             <img src={about.photo} alt="About" onError={(e) => (e.currentTarget.style.opacity = 0)} className="w-full h-full object-cover" />
@@ -24,9 +25,9 @@ export default function About() {
             ))}
             <div className="grid sm:grid-cols-2 gap-6 mt-8">
               {about.cards.map(({ icon: Icon, title, text }, i) => (
-                <Reveal key={title} delay={0.1 * i}>
-                  <div className="bg-card rounded-2xl p-7 h-full transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20">
-                    <Icon className="text-primary text-3xl mb-4" />
+                <Reveal key={title} delay={0.15 * i} dir={i % 2 ? "right" : "left"}>
+                  <div className="group bg-card rounded-2xl p-7 h-full transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20">
+                    <Icon className="text-primary text-3xl mb-4 transition-transform duration-700 group-hover:rotate-[360deg]" />
                     <h4 className="text-xl font-bold mb-2">{title}</h4>
                     <p className="text-muted">{text}</p>
                   </div>
