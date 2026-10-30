@@ -97,6 +97,14 @@ export const skills = [
 ];
 
 export const projects = [
+    {
+    title: "MK Construction ERP",
+    text: "A full-stack ERP for a construction company with an admin panel and a public website. It manages projects, clients, employees, materials, purchases, expenses, tasks and enquiries, with automated material stock tracking and low stock alerts.",
+    image: "/mk.png",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT"],
+    demo: "https://mk-construction-nine.vercel.app/",
+    code: "https://github.com/omkarmagdumwork/mk-construction-erp",
+  },
   {
     title: "Jewellery ERP System",
     text: "Developed a comprehensive full-stack ERP and e-commerce platform for jewellery businesses featuring an admin management dashboard, customer storefront, live rate calculator, billing, and secure inventory tracking.",
